@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TIMESTAMP= $(date)
+TIMESTAMP=$(date)
 
-echo "Shell executed at $TIMESTAMP"
+echo "Script executed at $TIMESTAMP"
 
 
