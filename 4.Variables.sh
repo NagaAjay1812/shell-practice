@@ -4,7 +4,7 @@ read USER_NAME     # But still you can ur username while you are entering use '-
 
 echo "your user name is $USER_NAME "
 
-echo "Enetr your password: "
+echo "Enter your password: "
 read -s PASSWORD
 
 
