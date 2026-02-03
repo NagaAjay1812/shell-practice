@@ -1,8 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
 
-LOGS_FOLDER="/var/log/shell-practise"
-LOGS_FILE="/var/log/shell-practise/$0.log"
+LOGS_FOLDER="/var/log/shell-script"
+LOGS_FILE="/var/log/shell-script/$0.log"
 
 
 
