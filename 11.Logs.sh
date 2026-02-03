@@ -2,14 +2,14 @@
 USERID=$(id -u)
 
 LOGS_FOLDER="/var/log/shell-practise"
-LOGS_FILE="/var/logs/shell-practise/$0.log"
+LOGS_FILE="/var/log/shell-practise/$0.log"
+
 
 
 if [ $USERID -ne 0 ]; then
     echo "please run the script with root user access." | tee -a $LOGS_FILE
     exit 1
 fi
-
 mkdir -p $LOGS_FOLDER
 
 VALIDATE(){ 
