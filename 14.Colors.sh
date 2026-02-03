@@ -12,7 +12,7 @@ N="\e[0m"
 mkdir -p $LOGS_FOLDER
 
 if [ $USERID -ne 0 ]; then
-    echo "please run the script with root user access." | tee -a $LOGS_FILE
+    echo "$R please run the script with root user access. $N" | tee -a $LOGS_FILE
     exit 1
 fi
 
