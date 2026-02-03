@@ -25,7 +25,7 @@ for package in $@  # we are passing parameters like sudo sh 11.Loops.sh nginx my
 do
     dnf list installed $package &>> $LOGS_FILE
     if [ $? -ne 0 ]; then
-        echo "Not installed, Installing now"
+        echo "$package Not installed, Installing now"
         dnf install $package -y &>> $LOGS_FILE
         VALIDATE $? "$package Installation"
     else 
