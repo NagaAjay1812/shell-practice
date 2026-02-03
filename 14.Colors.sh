@@ -9,11 +9,13 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+mkdir -p $LOGS_FOLDER
+
 if [ $USERID -ne 0 ]; then
     echo "please run the script with root user access." | tee -a $LOGS_FILE
     exit 1
 fi
-mkdir -p $LOGS_FOLDER
+
 
 VALIDATE(){ 
     if [ $1 -ne 0 ]; then
