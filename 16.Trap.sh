@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-trap 'echo "there is an error in $LINENO, command : $BASH_COMMAND"'ERR
+trap 'echo "there is an error in $LINENO, command : $BASH_COMMAND"' ERR
 
 # removed VALIDATE function completely and using trap from onwards
 USERID=$(id -u)
