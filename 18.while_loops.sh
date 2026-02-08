@@ -9,7 +9,7 @@
 
 #!/bin/bash
 
-FILENAME="13.loops.sh"
+FILENAME="13.Loops.sh"
 
 # Read the file line by line
 while IFS= read -r line; do
