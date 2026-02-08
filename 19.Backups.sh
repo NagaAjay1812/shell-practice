@@ -4,7 +4,7 @@ LOGS_FOLDER="/var/log/shell-script"
 LOGS_FILE="/var/log/shell-script/backup.log"
 SOURCE_DIR=$1
 DESTINATION_DIR=$2
-DAYS={3:: +14}
+DAYS=${3:-14} # 14 days is the default value, if the user not supplied
 
 R="\e[31m"
 G="\e[32m"
