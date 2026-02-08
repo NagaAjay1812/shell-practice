@@ -16,7 +16,7 @@ fi
 
 
 if [ ! -d $LOGS_FOLDER ]; then
-    echo -e "$R directory is not existed $N"
+    echo -e "$R directory is not existed $N" | tee -a $LOGS_FILE
     exit 1
 fi
 
