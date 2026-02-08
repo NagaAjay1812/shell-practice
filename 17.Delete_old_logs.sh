@@ -20,7 +20,7 @@ if [ ! -d $LOGS_FOLDER ]; then
     exit 1
 fi
 
-FILES_TO_DELETE=$(find $LOGS_FOLDER -name "*.log" -type f -mtime -14)
+FILES_TO_DELETE=$(find $LOGS_FOLDER -name "*.log" -type f -mtime -14)  #-14: means delete last 14 days logs ; +14 means delete logs older than 14 days
     echo $FILES_TO_DELETE
 
 
