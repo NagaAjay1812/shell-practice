@@ -56,7 +56,7 @@ fi
 
 ARCHIVE="$DESTINATION_DIR/logs_$(date +%F_%H%M%S).tar.gz" #The archive file (.tar.gz) is created in DESTINATION_DIR.
 tar -czf "$ARCHIVE" $FILES 
-  #tar -czf "$ARCHIVE" $FILES puts the found files into the archive then , && rm -f $FILES runs only if tar succeeds.
+  #tar -czf "$ARCHIVE" $FILES puts the found files into the archive then , 
 
 # delete ONLY if archive was really created and has size
 if [ -s "$ARCHIVE" ]; then
