@@ -51,12 +51,12 @@ log "Destination directory : $DESTINATION_DIR "
 log "Days : $DAYS "
 
 if [ -z $FILES ]; then 
-    log "Files doesnt exist to archieve...$Y SKIPPING $N
+    log "Files doesnt exist to archieve...$Y SKIPPING $N"
     exit 0
 fi
 
-ARCHIVE="$DESTINATION_DIR/logs_$(date +%F_%H%M%S).tar.gz"
-tar -czf "$ARCHIVE" $FILES && rm -f $FILES
+ARCHIVE="$DESTINATION_DIR/logs_$(date +%F_%H%M%S).tar.gz" #The archive file (.tar.gz) is created in DESTINATION_DIR.
+tar -czf "$ARCHIVE" $FILES && rm -f $FILES  #tar -czf "$ARCHIVE" $FILES puts the found files into the archive then , && rm -f $FILES runs only if tar succeeds.
 
 log "Archive created: $ARCHIVE"
 log "Files removed successfully"
