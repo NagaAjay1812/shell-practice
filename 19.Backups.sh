@@ -50,9 +50,8 @@ log "Source directory : $SOURCE_DIR "
 log "Destination directory : $DESTINATION_DIR "
 log "Days : $DAYS "
 
-if [ -z $FILES ]; then 
-    log "Files doesnt exist to archieve...$Y SKIPPING $N" | tee -a $LOG_FILE
-    exit 0
+if [ -z "${FILES}" ]; then
+    log "No files to archieve ... $Y Skipping $N"
 fi
 
 ARCHIVE="$DESTINATION_DIR/logs_$(date +%F_%H%M%S).tar.gz" #The archive file (.tar.gz) is created in DESTINATION_DIR.
