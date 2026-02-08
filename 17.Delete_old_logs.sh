@@ -15,7 +15,7 @@ fi
 
 
 
-if [ !-d $LOGS_FOLDER ]; then
+if [ ! -d $LOGS_FOLDER ]; then
     echo -e "$R directory is not existed $N"
     exit 1
 fi
