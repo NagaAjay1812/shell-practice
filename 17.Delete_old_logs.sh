@@ -21,12 +21,12 @@ if [ ! -d $LOGS_FOLDER ]; then
 fi
 
 FILES_TO_DELETE=$(find $LOGS_FOLDER -name "*.log" -type f -mtime -14)  #-14: means delete last 14 days logs ; +14 means delete logs older than 14 days
-    echo $FILES_TO_DELETE
+    # echo $FILES_TO_DELETE
 
 # Read the file line by line
-while IFS= read -r line; do # seperate line by line and store in line variable then print the line
+while IFS= read -r line; do # seperate line by line and store in 'line' variable.
   # Process the line here
-  echo "Line content: $line" # print the line
+  echo "Deleting files: $line" # print the line
 done <<< "$FILES_TO_DELETE" # to read input variable we use <<< ; to read file we use <.
 
 
