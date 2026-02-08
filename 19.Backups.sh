@@ -39,8 +39,5 @@ if [! -d $DESTINATION_DIR ]; then
 fi
 
 #find the files in source directory
-if [ find /home/ec2-user/app-logs -name "*.log" -type f -mtime -14 ]; then
-    echo "displaying the files"
-fi
-
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime -14 )
 
