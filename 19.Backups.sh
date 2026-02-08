@@ -22,7 +22,7 @@ USAGE(){
     exit 1
 }
 
-LOGS(){
+log(){
     echo -e "$(date "+%Y-%m-%d %H:%M:%S") | $1 " | tee -a $LOG_FILE
 }
 
@@ -32,12 +32,12 @@ if [ $# -lt 2 ]; then
 fi
 
 ##directories exist or not
-if [! -d $SOURCE_DIR ]; then
+if [ ! -d $SOURCE_DIR ]; then
     echo -e "$R Source directory : $SOURCE_DIR doesn't exist $N"
     exit 1
 fi
 
-if [! -d $DESTINATION_DIR ]; then
+if [ ! -d $DESTINATION_DIR ]; then
     echo -e "$R Destination directory :$DESTINATION_DIR doesn't exist $N"
     exit 1
 fi
